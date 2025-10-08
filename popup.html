@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Rewriter</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h2>On-Device AI Rewriter</h2>
+        <div class="input-group">
+            <label for="inputText">Text to rewrite:</label>
+            <textarea id="inputText" placeholder="Type or select text on a page..."></textarea>
+        </div>
+        <div class="input-group">
+            <label for="tone">Select a tone:</label>
+            <select id="tone">
+                <option value="polite">Polite</option>
+                <option value="assertive">Assertive</option>
+                <option value="friendly">Friendly</option>
+                <option value="apologetic">Apologetic</option>
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+            </select>
+        </div>
+        <button id="rewriteBtn">Rewrite</button>
+        <div id="outputContainer" class="hidden">
+            <h4>Original</h4>
+            <div id="originalText" class="text-box"></div>
+            <h4>Rewritten</h4>
+            <div id="outputText" class="text-box"></div>
+            <div class="button-group">
+                 <button id="copyBtn">Copy</button>
+                 <button id="regenerateBtn">Regenerate</button>
+            </div>
+        </div>
+        <div id="status"></div>
+    </div>
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
